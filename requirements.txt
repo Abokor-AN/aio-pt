@@ -1,0 +1,7 @@
+langchain
+langserve
+ctransformers
+sse_starlette
+uvicorn
+fastapi
+pydantic==1.10.13
