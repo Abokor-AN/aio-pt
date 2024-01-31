@@ -20,7 +20,7 @@ async def redirect_root_to_docs():
 # Edit this to add the chain you want to add
 model = CTransformers(model=r'models\mistralai\Mistral-7B-Instruct-v0.2-GGUF\mistral-7b-instruct-v0.2.Q5_K_M.gguf', callbacks=[StreamingStdOutCallbackHandler()])
 prompt = ChatPromptTemplate.from_template("{prompt}")
-add_routes(app, prompt | model, path="/xana", disabled_endpoints=["playground"])
+add_routes(app, prompt | model, path="/xana")
 
 if __name__ == "__main__":
     import uvicorn
